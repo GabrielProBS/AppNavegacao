@@ -1,21 +1,21 @@
 import React from 'react';
-import {View, Text, Button, StyleSheet, Dimensions} from 'react-native';
+import { View, Text, Button, StyleSheet, Dimensions} from 'react-native';
 
-const windowWidth= Dimensions.get('window').width;
+const windowWidth = Dimensions.get('window').width;
 
-export default function DetailsScreen({navigation}){
-    return(
+export default function DetailsScreen({ navigation }) {
+    return (
         <View style={styles.container}>
-            <Text style= {styles.title}> Tela de Detalhes </Text>
+            <Text style={styles.title}>Details Screen</Text>
             <View style={styles.buttonContainer}>
                 <Button
-                title= "Vá para Inicío"
+                title="Go to Home"
                 onPress={() => navigation.navigate('Home')}
                 />
             </View>
             <View style={styles.buttonContainer}>
                 <Button
-                title="Vá para Perfil"
+                title="Go to Profile"
                 onPress={() => navigation.navigate('Profile')}
                 />
             </View>
@@ -23,21 +23,21 @@ export default function DetailsScreen({navigation}){
     );
 };
 
-const styles=StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
-        flex:1,
-        justifyContent:'center',    
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#faf0e6',
+        backgroundColor: '#faf0e6', // Cor de fundo da tela
     },
     title: {
-        fontSize:24,
+        fontSize: 24,
         marginBottom: 20,
     },
     buttonContainer: {
-        backgroundColor: '#ffebcd',
-        margin:10,
-        width: windowWidth *0.5,
+        backgroundColor: '#ffebcd', // Cor de fundo do container do botão
+        margin: 10,
+        width: windowWidth * 0.5, // 50% da largura da tela
         borderRadius: 5,
     },
 });
